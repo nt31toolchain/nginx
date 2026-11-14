@@ -68,7 +68,7 @@ if [ $PCRE != NONE ]; then
 
 else
 
-    if [ "$NGX_PLATFORM" != win32 ]; then
+    if [ "$NGX_PLATFORM" != win32 -o "$NGX_CC_NAME" = gcc -o "$NGX_CC_NAME" = clang ]; then
         PCRE=NO
     fi
 
